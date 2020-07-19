@@ -1,17 +1,49 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <Questionbox 
+      :currentQuestion="questions[index]"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Questionbox from './components/Questionbox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Questionbox
+  },
+  data() {
+    return {
+      questions: [],
+      index: 0,
+      user: [
+        {
+          name: "元幸",
+          age: 23
+        },
+        {
+          name: "幸子",
+          age:33
+        }
+      ]
+    }
+  },
+  // loadした時にクイズを読み込む
+  mounted: function(){
+    let self = this
+    console.log(this.questions);
+    fetch('https://opentdb.com/api.php?amount=10&category=18')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      self.questions = myJson.results;
+    });
   }
 }
 </script>
