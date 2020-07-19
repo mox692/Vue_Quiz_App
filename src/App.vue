@@ -2,6 +2,11 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
 
+  <!-- 
+    ・カスタム属性を定義している。
+    ・子にデータを渡している。
+    ・question,indexは、dataとして参照されている
+   -->
     <Questionbox 
       :currentQuestion="questions[index]"
     />

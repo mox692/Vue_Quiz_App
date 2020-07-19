@@ -4,6 +4,7 @@
       <template v-slot:header>QuizApp</template>
 
       <template v-slot:lead>
+          <!-- 親から渡ってきたcurrentQuestionを受け取る -->
         question:{{ currentQuestion.question }}<br>
         answer:{{ currentQuestion.correct_answer }}
       </template>
@@ -22,6 +23,7 @@
 
 <script>
 export default {
+    
     props: {
         currentQuestion: Object
     }
