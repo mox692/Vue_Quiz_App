@@ -33,13 +33,11 @@ npm run serve
 
 ## I refferd,
 
-### freeCodeCamp.org
-[URL] https://www.youtube.com/watch?v=4deVCNJq3qc&t=5258s
+### [freeCodeCamp.org](https://www.youtube.com/watch?v=4deVCNJq3qc&t=5258s)
 
 There are so manymany tutorials, and I always get help!(thank you so much)
 
-### Open Trivia API
-[URL] https://opentdb.com/api_config.php
+### [Open Trivia API](https://opentdb.com/api_config.php)
 
 This is the cool API which give you so various types of quizzes.
 APP uses this API in backend when create quiz.
